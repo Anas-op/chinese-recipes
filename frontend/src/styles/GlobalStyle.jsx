@@ -26,6 +26,13 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
     }
 
+    
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-ExtraBold.ttf');
+      font-weight: 800;
+      font-style: normal;
+    }
 
     @font-face {
       font-family: 'Montserrat';
@@ -77,7 +84,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${fontSizes.base};
     color: ${colors.white};
     background:#141414;
-
   }
 
   #root {

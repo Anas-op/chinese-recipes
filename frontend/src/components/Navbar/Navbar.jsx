@@ -54,7 +54,6 @@ const Navbar = () => {
     return (
         <Container>
             <Logo>Cookery.</Logo>
-
         <Right>
             <Contacts>
                 <Icons />
