@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button,Image } from 'react-bootstrap';
 import styled from 'styled-components';
 import media from '../../styles/media';
@@ -7,7 +7,7 @@ const HeroContent = styled.div`
 justify-content: flex-start;
 padding-top: 20px;
 display:flex;
-height: auto;
+height: 100vh;
 align-items:center;
 flex-direction:column;
 button{
@@ -57,7 +57,7 @@ const RecipesButton = styled(Button)`
 
 
 const Banner = styled.span`
-    font-size: 150px;
+    font-size: 200px;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: -120px;
@@ -86,11 +86,23 @@ const Banner = styled.span`
 
 
 const Hero = () => {
+
+
+    const [recipes,setRecipes] = useState();
+
+
+    const getRecipes = async() => {
+        const recipes = await fetch("api/v1/dishes")
+        setRecipes(recipes);
+    }
+
+
+    
     return (
         <HeroContent>
             <Banner><span>Let's</span>&nbsp;<span>Cook</span></Banner>
             <Image src='/images/chinese-food.png' alt='logo'></Image>
-            <RecipesButton>RECIPES</RecipesButton>
+            <RecipesButton onClick={getRecipes}>RECIPES</RecipesButton>
         </HeroContent>
     );
 }

@@ -6,7 +6,7 @@ const Main = styled.main`
   margin: 0 auto;
   max-width: 100%;
   min-height: 100vh;
-  padding: 30px 100px 100px 100px;
+  padding: 30px 0px 0px 0px;
   ${media.desktop`
     padding: 30px 50px;
   `};

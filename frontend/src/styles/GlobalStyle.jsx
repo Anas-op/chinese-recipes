@@ -83,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${fonts.primary};
     font-size: ${fontSizes.base};
     color: ${colors.white};
-    background:#141414;
+    background:#000;
   }
 
   #root {
