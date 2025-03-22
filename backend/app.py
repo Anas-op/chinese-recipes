@@ -12,16 +12,12 @@ headers = {
 	"X-RapidAPI-Host": "chinese-food-db.p.rapidapi.com"
 }
 
-@app.route("/api")
-def home():
-    return "hello"
-
-@app.route('/v1/dishes')
+@app.route('/dishes')
 def getDishes():
     response = requests.request("GET", baseUrl, headers=headers)
     return response.json()
 
-@app.route('/v1/dishes/<int:id>')
+@app.route('/dishes/<int:id>')
 def getDish(id):
     response = requests.request("GET", baseUrl + str(id), headers=headers)
     return response.json()
